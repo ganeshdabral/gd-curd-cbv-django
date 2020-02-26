@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% if title %}{{title}}{% endif %}</title>
+</head>
+<body>
+	<table>
+		{% for obj in object_list %}
+			<tr>
+				<td><a href="{{obj.getAbsUrl}}">view</a></td>
+				<td>{{obj.isbn}}</td>
+				<td>{{obj.title}}</td>
+				<td>{{obj.author}}</td>
+				<td>{{obj.page}}</td>
+				<td><a href="{{obj.getUpdateUrl}}">edit</a></td>
+				<td><a href="{{obj.getDeleteUrl}}">delete</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
